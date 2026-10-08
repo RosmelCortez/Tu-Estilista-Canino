@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Estilista Canino | Peluquería y Cuidado Canino</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#2a8cc8',
+              darkblue: '#1e6896',
+              yellow: '#ffd43b',
+              accent: '#fcc419',
+              dark: '#1e293b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS Animation Library CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-white text-slate-800 font-sans antialiased selection:bg-brand-yellow selection:text-brand-dark">
+
+  <!-- NAVIGATION BAR -->
+  <nav class="fixed top-0 w-full z-40 bg-[#2a8cc8] border-b border-blue-400/30 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center bg-[#2a8cc8]">
+            <img src="logo.jpg" alt="Tu Estilista Canino Logo" class="w-full h-full object-cover">
+          </div>
+          <span class="text-2xl font-black tracking-tight text-white uppercase">
+            Tu Estilista Canino
+          </span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8 font-semibold text-white">
+          <a href="#inicio" class="hover:text-brand-yellow transition">Inicio</a>
+          <a href="#servicios" class="hover:text-brand-yellow transition">Servicios</a>
+          <a href="#galeria" class="hover:text-brand-yellow transition">Galería</a>
+          <a href="#contacto" class="hover:text-brand-yellow transition">Contacto</a>
+        </div>
+
+        <!-- Social Buttons & CTA Desktop -->
+        <div class="hidden md:flex items-center gap-3">
+          <a href="https://www.instagram.com/tuestilistacanino/" target="_blank" class="w-10 h-10 rounded-full bg-white/20 hover:bg-pink-600 transition flex items-center justify-center text-white">
+            <i class="fa-brands fa-instagram text-lg"></i>
+          </a>
+          <a href="https://www.tiktok.com/@tuestilistacanino" target="_blank" class="w-10 h-10 rounded-full bg-white/20 hover:bg-black transition flex items-center justify-center text-white">
+            <i class="fa-brands fa-tiktok text-lg"></i>
+          </a>
+          <a href="https://wa.me/04141531124" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold px-4 py-2 rounded-full flex items-center gap-2 shadow-lg transition">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="md:hidden text-2xl text-white focus:outline-none">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden bg-[#2a8cc8] border-t border-blue-400/30 px-4 pt-2 pb-6 space-y-3 font-semibold text-white">
+      <a href="#inicio" class="block py-2 hover:text-brand-yellow">Inicio</a>
+      <a href="#servicios" class="block py-2 hover:text-brand-yellow">Servicios</a>
+      <a href="#galeria" class="block py-2 hover:text-brand-yellow">Galería</a>
+      <a href="#contacto" class="block py-2 hover:text-brand-yellow">Contacto</a>
+      
+      <div class="flex items-center gap-3 pt-3 border-t border-blue-400/30">
+        <a href="https://www.instagram.com/tuestilistacanino/" target="_blank" class="flex-1 py-2 rounded-lg bg-white/20 flex justify-center items-center gap-2 text-white">
+          <i class="fa-brands fa-instagram text-pink-300"></i> Instagram
+        </a>
+        <a href="https://tiktok.com" target="_blank" class="flex-1 py-2 rounded-lg bg-white/20 flex justify-center items-center gap-2 text-white">
+          <i class="fa-brands fa-tiktok"></i> TikTok
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="inicio" class="pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden bg-cover bg-center bg-no-repeat text-slate-800" style="background-image: url('fonde 1 blanco.png');">
+    <div class="absolute inset-0 bg-white/60 backdrop-blur-[1px]"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        
+        <div data-aos="fade-right">
+          <span class="inline-block px-4 py-1.5 rounded-full text-xs font-black tracking-wider uppercase bg-brand-yellow text-brand-dark mb-4 shadow-sm">
+            ¡El mejor cuidado para tu mascota! 🐾
+          </span>
+          <h1 class="text-4xl sm:text-6xl font-black text-slate-900 leading-tight mb-6">
+            Peluquería & Estilo Premium para tus <span class="text-[#2a8cc8]">Peluditos</span>
+          </h1>
+          <p class="text-slate-700 text-lg mb-8 leading-relaxed font-semibold">
+            Consentimos a tu mejor amigo con cortes de raza, baños relajantes, limpieza de oídos y atención llena de amor. Servicio profesional garantizado.
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <button onclick="openModal()" class="bg-brand-yellow hover:bg-brand-accent text-brand-dark font-black px-8 py-4 rounded-xl shadow-xl transition transform hover:-translate-y-0.5 flex items-center gap-3">
+              <i class="fa-solid fa-calendar-check text-xl"></i>
+              <span>Agendar Cita</span>
+            </button>
+            <a href="https://wa.me/04141531124" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition flex items-center gap-3">
+              <i class="fa-brands fa-whatsapp text-2xl"></i>
+              <span>Escribir por WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Card Graphic -->
+        <div data-aos="fade-left" class="relative flex justify-center">
+          <div class="relative w-80 h-80 sm:w-96 sm:h-96 rounded-3xl bg-gradient-to-tr from-[#2a8cc8] to-brand-yellow p-2 shadow-2xl overflow-hidden">
+            <div class="w-full h-full bg-slate-900 rounded-[22px] flex flex-col items-center justify-center overflow-hidden relative group">
+              <img src="logo.jpg" alt="Tu Estilista Canino" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent p-6 flex flex-col justify-end text-center">
+                <h3 class="text-2xl font-bold text-white mb-1">Peluquería Profesional</h3>
+                <p class="text-slate-300 text-xs mb-3">Especialistas en trato amigable sin estrés.</p>
+                <div class="flex justify-center gap-2">
+                  <span class="bg-slate-900/80 backdrop-blur-sm text-[#2a8cc8] text-xs font-bold px-3 py-1 rounded-full border border-slate-700">Baños</span>
+                  <span class="bg-slate-900/80 backdrop-blur-sm text-brand-yellow text-xs font-bold px-3 py-1 rounded-full border border-slate-700">Cortes</span>
+                  <span class="bg-slate-900/80 backdrop-blur-sm text-green-400 text-xs font-bold px-3 py-1 rounded-full border border-slate-700">Uñas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="py-20 bg-[#2a8cc8] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+        <h2 class="text-3xl sm:text-5xl font-black text-white mb-4">
+          Nuestros <span class="text-brand-yellow">Servicios</span>
+        </h2>
+        <p class="text-blue-100 text-lg">Ofrecemos un servicio integral de higiene y belleza para consentir a tu mascota como se merece.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Servicio 1 -->
+        <div data-aos="fade-up" data-aos-delay="100" class="relative group overflow-hidden rounded-2xl border border-white/20 shadow-2xl min-h-[380px] flex flex-col justify-between p-6">
+          <img src="/img corte.jpeg" alt="Corte de Raza y Estilo" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/85 to-slate-900/60"></div>
+          
+          <div class="relative z-10">
+            <div class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-[#2a8cc8] flex items-center justify-center text-xl mb-4 group-hover:bg-brand-yellow group-hover:text-slate-900 transition">
+              <i class="fa-solid fa-scissors"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Corte de Raza y Estilo</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">Cortes higiénicos, perfilado a tijera y arreglos adaptados según la raza o preferencia del cliente.</p>
+          </div>
+
+          <div class="relative z-10 pt-4">
+            <a href="https://wa.me/04141531124" target="_blank" class="text-brand-yellow font-bold flex items-center gap-2 hover:underline text-sm">
+              Consultar <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Servicio 2 -->
+        <div data-aos="fade-up" data-aos-delay="200" class="relative group overflow-hidden rounded-2xl border border-white/20 shadow-2xl min-h-[380px] flex flex-col justify-between p-6">
+          <img src="/img bano.jpg" alt="Baño Medicado y Relajante" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/85 to-slate-900/60"></div>
+          
+          <div class="relative z-10">
+            <div class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-brand-yellow flex items-center justify-center text-xl mb-4 group-hover:bg-brand-yellow group-hover:text-slate-900 transition">
+              <i class="fa-solid fa-soap"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Baño Medicado y Relajante</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">Uso de champú dermatológico, secado a temperatura controlada, cepillado y perfume canino especial.</p>
+          </div>
+
+          <div class="relative z-10 pt-4">
+            <a href="https://wa.me/04141531124" target="_blank" class="text-brand-yellow font-bold flex items-center gap-2 hover:underline text-sm">
+              Consultar <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Servicio 3 -->
+        <div data-aos="fade-up" data-aos-delay="300" class="relative group overflow-hidden rounded-2xl border border-white/20 shadow-2xl min-h-[380px] flex flex-col justify-between p-6">
+          <img src="servicio3.jpg" alt="Corte de Uñas & Oídos" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/85 to-slate-900/60"></div>
+          
+          <div class="relative z-10">
+            <div class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white flex items-center justify-center text-xl mb-4 group-hover:bg-brand-yellow group-hover:text-slate-900 transition">
+              <i class="fa-solid fa-paw"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Corte de Uñas & Oídos</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">Mantenimiento de uñas con corte y limado seguro, más limpieza profunda y despeje de oídos.</p>
+          </div>
+
+          <div class="relative z-10 pt-4">
+            <a href="https://wa.me/04141531124" target="_blank" class="text-brand-yellow font-bold flex items-center gap-2 hover:underline text-sm">
+              Consultar <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Servicio 4 -->
+        <div data-aos="fade-up" data-aos-delay="400" class="relative group overflow-hidden rounded-2xl border border-white/20 shadow-2xl min-h-[380px] flex flex-col justify-between p-6">
+          <img src="/img limpieza dental.jpg" alt="Limpieza Dental Canina" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/85 to-slate-900/60"></div>
+          
+          <div class="relative z-10">
+            <div class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-cyan-300 flex items-center justify-center text-xl mb-4 group-hover:bg-brand-yellow group-hover:text-slate-900 transition">
+              <i class="fa-solid fa-tooth"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-2">Limpieza Dental</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">Profilaxis profiláctica para eliminación de sarro, mal aliento y prevención de enfermedades bucales en tu mascota.</p>
+          </div>
+
+          <div class="relative z-10 pt-4">
+            <a href="https://wa.me/04141531124" target="_blank" class="text-brand-yellow font-bold flex items-center gap-2 hover:underline text-sm">
+              Consultar <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA DE TRABAJOS (FONDO CON PATRÓN / BLANCO) -->
+  <section id="galeria" class="py-20 relative bg-cover bg-center bg-no-repeat text-slate-800" style="background-image: url('fonde 1 blanco.png');">
+    <div class="absolute inset-0 bg-white/70 backdrop-blur-[1px]"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+        <h2 class="text-3xl sm:text-5xl font-black text-slate-900 mb-4">
+          Nuestros <span class="text-[#2a8cc8]">Clientes Felices</span>
+        </h2>
+        <p class="text-slate-600 text-lg font-medium">Mira los cambios de look y la felicidad de nuestros clientes caninos.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        
+        <div data-aos="zoom-in" class="relative group overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-lg aspect-square">
+          <img src="/img servicio(1).jpeg" alt="Corte de Raza Pug" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+          <div class="absolute inset-0 bg-[#2a8cc8]/85 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center p-4 text-center">
+            <span class="font-bold text-white text-lg">Corte de Raza Pug</span>
+          </div>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="100" class="relative group overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-lg aspect-square">
+          <img src="/img servicio(2).jpeg" alt="Baño Relajante Poodle" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+          <div class="absolute inset-0 bg-brand-yellow/90 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center p-4 text-center text-brand-dark">
+            <span class="font-bold text-lg">Baño Relajante Poodle</span>
+          </div>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="200" class="relative group overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-lg aspect-square">
+          <img src="/img servicio(3).jpeg" alt="Perfilado Schnauzer" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+          <div class="absolute inset-0 bg-[#2a8cc8]/85 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center p-4 text-center">
+            <span class="font-bold text-white text-lg">Perfilado Schnauzer</span>
+          </div>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="300" class="relative group overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-lg aspect-square">
+          <img src="/img servicio(4).jpeg" alt="Corte Shih Tzu" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+          <div class="absolute inset-0 bg-brand-yellow/90 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center p-4 text-center text-brand-dark">
+            <span class="font-bold text-lg">Corte Shih Tzu</span>
+          </div>
+        </div>
+
+        <div data-aos="zoom-in" class="relative group overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-lg aspect-square">
+          <img src="/img servicio(5).jpeg" alt="Corte de Raza Pug" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+          <div class="absolute inset-0 bg-[#2a8cc8]/85 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center p-4 text-center">
+            <span class="font-bold text-white text-lg">Corte de Raza Pug</span>
+          </div>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="300" class="relative group overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-lg aspect-square">
+          <img src="/img servicio(6).jpeg" alt="Corte Shih Tzu" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+          <div class="absolute inset-0 bg-brand-yellow/90 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center p-4 text-center text-brand-dark">
+            <span class="font-bold text-lg">Corte Shih Tzu</span>
+          </div>
+        </div>
+
+        <div data-aos="zoom-in" class="relative group overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-lg aspect-square">
+          <img src="/img servicio(7).jpg" alt="Corte de Raza Pug" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+          <div class="absolute inset-0 bg-[#2a8cc8]/85 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center p-4 text-center">
+            <span class="font-bold text-white text-lg">Corte de Raza Pug</span>
+          </div>
+        </div>
+
+         <div data-aos="zoom-in" data-aos-delay="300" class="relative group overflow-hidden rounded-2xl bg-slate-100 border border-slate-200 shadow-lg aspect-square">
+          <img src="/img servicio(8).jpg" alt="Corte Shih Tzu" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+          <div class="absolute inset-0 bg-brand-yellow/90 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center p-4 text-center text-brand-dark">
+            <span class="font-bold text-lg">Corte Shih Tzu</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO DE CONTACTO (FONDO CON PATRÓN / BLANCO) -->
+  <section id="contacto" class="py-20 relative bg-cover bg-center bg-no-repeat text-slate-800" style="background-image: url('fonde 1 blanco.png');">
+    <div class="absolute inset-0 bg-white/70 backdrop-blur-[1px]"></div>
+
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" data-aos="fade-up">
+      <div class="bg-white/90 backdrop-blur-md p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-2xl">
+        <h2 class="text-3xl font-black text-center text-slate-900 mb-2">Agenda la Cita de tu Mascota</h2>
+        <p class="text-slate-600 text-center mb-8 font-medium">Déjanos tus datos y te contactaremos de inmediato por WhatsApp.</p>
+
+        <form id="appointmentForm" class="space-y-4">
+          <div>
+            <label class="block text-sm font-bold text-slate-700 mb-2">Tu Nombre</label>
+            <input type="text" id="userName" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#2a8cc8] focus:bg-white focus:ring-2 focus:ring-[#2a8cc8]/20 transition" placeholder="Ej. Carlos Pérez">
+          </div>
+          
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-bold text-slate-700 mb-2">Nombre del Perrito</label>
+              <input type="text" id="petName" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#2a8cc8] focus:bg-white focus:ring-2 focus:ring-[#2a8cc8]/20 transition" placeholder="Ej. Firulais">
+            </div>
+            <div>
+              <label class="block text-sm font-bold text-slate-700 mb-2">Raza / Tamaño</label>
+              <input type="text" id="petBreed" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#2a8cc8] focus:bg-white focus:ring-2 focus:ring-[#2a8cc8]/20 transition" placeholder="Ej. Poodle Pequeño">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-bold text-slate-700 mb-2">Servicio Requerido</label>
+            <select id="serviceType" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-[#2a8cc8] focus:bg-white focus:ring-2 focus:ring-[#2a8cc8]/20 transition">
+              <option value="Baño y Corte">Baño y Corte Completo</option>
+              <option value="Solo Baño">Solo Baño y Cepillado</option>
+              <option value="Uñas y Oídos">Corte de Uñas / Limpieza Oídos</option>
+              <option value="Limpieza Dental">Limpieza Dental</option>
+            </select>
+          </div>
+
+          <button type="submit" class="w-full bg-[#2a8cc8] hover:bg-blue-600 text-white font-black py-4 rounded-xl shadow-lg hover:shadow-xl transition flex justify-center items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+            <span>Enviar Solicitud por WhatsApp</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="relative bg-slate-950 border-t border-slate-800 py-16 overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="logo2.jpg" alt="Fondo Footer" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/90 to-slate-950/80"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center bg-[#2a8cc8] border border-white/20 shadow-md">
+          <img src="logo.jpg" alt="Logo Footer" class="w-full h-full object-cover">
+        </div>
+        <span class="font-black text-white text-xl tracking-tight uppercase">Tu Estilista Canino</span>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="https://wa.me/04141531124" target="_blank" class="w-12 h-12 rounded-full bg-slate-900/80 hover:bg-green-600 transition flex items-center justify-center text-white text-xl shadow border border-slate-700">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="w-12 h-12 rounded-full bg-slate-900/80 hover:bg-pink-600 transition flex items-center justify-center text-white text-xl shadow border border-slate-700">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://tiktok.com" target="_blank" class="w-12 h-12 rounded-full bg-slate-900/80 hover:bg-black transition flex items-center justify-center text-white text-xl shadow border border-slate-700">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+      </div>
+
+      <p class="text-slate-400 text-sm font-medium">© 2026 Tu Estilista Canino. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- BOTONES FLOTANTES DE REDES -->
+  <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+    <a href="https://www.tiktok.com/@tuestilistacanino" target="_blank" class="w-12 h-12 rounded-full bg-black hover:scale-110 transition flex items-center justify-center text-white shadow-xl border border-slate-700">
+      <i class="fa-brands fa-tiktok text-xl"></i>
+    </a>
+    <a href="https://www.instagram.com/tuestilistacanino/" target="_blank" class="w-12 h-12 rounded-full bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 hover:scale-110 transition flex items-center justify-center text-white shadow-xl">
+      <i class="fa-brands fa-instagram text-xl"></i>
+    </a>
+    <a href="https://wa.me/04141531124" target="_blank" class="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 hover:scale-110 transition flex items-center justify-center text-white shadow-2xl">
+      <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+  </div>
+
+  <!-- MODAL DE AGENDAR -->
+  <div id="bookingModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-700 rounded-3xl max-w-md w-full p-6 relative shadow-2xl">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-2xl">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="text-center mb-6">
+        <div class="w-16 h-16 bg-[#2a8cc8]/20 text-[#2a8cc8] rounded-full flex items-center justify-center mx-auto mb-3 text-3xl">
+          <i class="fa-solid fa-dog"></i>
+        </div>
+        <h3 class="text-2xl font-black text-white">¡Reserva la cita de tu mascota!</h3>
+        <p class="text-slate-400 text-sm mt-1">Atención personalizada y sin estrés.</p>
+      </div>
+
+      <div class="space-y-3">
+        <a href="https://wa.me/584120000000?text=Hola!%20Quiero%20agendar%20una%20cita%20para%20mi%20perrito" target="_blank" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-3 transition">
+          <i class="fa-brands fa-whatsapp text-xl"></i> Agendar directo por WhatsApp
+        </a>
+        <a href="https://www.instagram.com/tuestilistacanino/" target="_blank" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-3 transition border border-slate-700">
+          <i class="fa-brands fa-instagram text-pink-500 text-xl"></i> Ver Trabajos en Instagram
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AOS ANIMATION SCRIPT & JS LOGIC -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    const bookingModal = document.getElementById('bookingModal');
+
+    function openModal() {
+      bookingModal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      bookingModal.classList.add('hidden');
+    }
+
+    document.getElementById('appointmentForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('userName').value;
+      const pet = document.getElementById('petName').value;
+      const breed = document.getElementById('petBreed').value;
+      const service = document.getElementById('serviceType').value;
+
+      const phone = "584120000000";
+      const message = `Hola! Mi nombre es ${name}. Me gustaría agendar una cita para mi mascota ${pet} (${breed}) para el servicio de: ${service}.`;
+
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, '_blank');
+    });
+  </script>
+</body>
+</html>
