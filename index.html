@@ -53,6 +53,7 @@
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center space-x-8 font-semibold text-white">
           <a href="#inicio" class="hover:text-brand-yellow transition">Inicio</a>
+          <a href="#equipo" class="hover:text-brand-yellow transition">Equipo</a>
           <a href="#servicios" class="hover:text-brand-yellow transition">Servicios</a>
           <a href="#galeria" class="hover:text-brand-yellow transition">Galería</a>
           <a href="#contacto" class="hover:text-brand-yellow transition">Contacto</a>
@@ -83,6 +84,7 @@
     <!-- Mobile Menu Dropdown -->
     <div id="mobileMenu" class="hidden md:hidden bg-[#2a8cc8] border-t border-blue-400/30 px-4 pt-2 pb-6 space-y-3 font-semibold text-white">
       <a href="#inicio" class="block py-2 hover:text-brand-yellow">Inicio</a>
+      <a href="#equipo" class="block py-2 hover:text-brand-yellow">Equipo</a>
       <a href="#servicios" class="block py-2 hover:text-brand-yellow">Servicios</a>
       <a href="#galeria" class="block py-2 hover:text-brand-yellow">Galería</a>
       <a href="#contacto" class="block py-2 hover:text-brand-yellow">Contacto</a>
@@ -91,7 +93,7 @@
         <a href="https://www.instagram.com/tuestilistacanino/" target="_blank" class="flex-1 py-2 rounded-lg bg-white/20 flex justify-center items-center gap-2 text-white">
           <i class="fa-brands fa-instagram text-pink-300"></i> Instagram
         </a>
-        <a href="https://www.tiktok.com/@tuestilistacanino" target="_blank" class="flex-1 py-2 rounded-lg bg-white/20 flex justify-center items-center gap-2 text-white">
+        <a href="https://tiktok.com" target="_blank" class="flex-1 py-2 rounded-lg bg-white/20 flex justify-center items-center gap-2 text-white">
           <i class="fa-brands fa-tiktok"></i> TikTok
         </a>
       </div>
@@ -151,6 +153,45 @@
     </div>
   </section>
 
+  <!-- NUESTRO EQUIPO (NUEVA SECCIÓN) -->
+ <section id="equipo" class="py-20 relative bg-cover bg-center bg-no-repeat text-slate-800" style="background-image: url('fonde_blanco.jpg');">
+    <div class="absolute inset-0 bg-white/70 backdrop-blur-[1px]"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
+        <h2 class="text-3xl sm:text-5xl font-black text-slate-900 mb-4">
+          Nuestro <span class="text-[#2a8cc8]">Equipo</span>
+        </h2>
+        <p class="text-slate-600 text-lg font-medium">Conoce a los profesionales apasionados que cuidan y consienten a tu mascota con amor y dedicación.</p>
+      </div>
+
+      <div class="max-w-4xl mx-auto" data-aos="zoom-in">
+        <div class="bg-white/90 backdrop-blur-md rounded-3xl border border-slate-200 shadow-2xl overflow-hidden p-6 sm:p-8">
+          
+          <!-- Nombres / Etiquetas de los estilistas -->
+          <div class="flex flex-wrap justify-center gap-3 mb-6">
+            <span class="bg-[#2a8cc8] text-white font-bold px-5 py-2 rounded-full text-sm sm:text-base shadow-md">🐾 Alejandro</span>
+            <span class="bg-brand-yellow text-brand-dark font-bold px-5 py-2 rounded-full text-sm sm:text-base shadow-md">✂️ Leandro</span>
+            <span class="bg-[#2a8cc8] text-white font-bold px-5 py-2 rounded-full text-sm sm:text-base shadow-md">🐾 Anyelo</span>
+            <span class="bg-brand-yellow text-brand-dark font-bold px-5 py-2 rounded-full text-sm sm:text-base shadow-md">✂️ Jose</span>
+          </div>
+
+          <!-- Marco y Foto Adaptable (sin recorte) -->
+          <div class="w-full rounded-2xl overflow-hidden shadow-md mb-6 bg-slate-100 flex items-center justify-center">
+            <img src="/equipo_tu_estilista_canino.png" alt="Nuestro Equipo" class="w-full h-auto object-contain max-h-[500px] rounded-2xl">
+          </div>
+
+          <div class="text-center">
+            <p class="text-slate-600 text-sm sm:text-base font-medium max-w-2xl mx-auto">
+              Comprometidos en brindar un ambiente libre de estrés, asegurando belleza, higiene y felicidad para cada peludito que nos visita.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- SERVICIOS -->
   <section id="servicios" class="py-20 bg-[#2a8cc8] text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -186,15 +227,15 @@
 
         <!-- Servicio 2 -->
         <div data-aos="fade-up" data-aos-delay="200" class="relative group overflow-hidden rounded-2xl border border-white/20 shadow-2xl min-h-[380px] flex flex-col justify-between p-6">
-          <img src="img_bano.jpeg" alt="Baño Medicado y Relajante" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <img src="img_bano.jpeg" alt="Baño Relajante y Estético" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/85 to-slate-900/60"></div>
           
           <div class="relative z-10">
             <div class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-brand-yellow flex items-center justify-center text-xl mb-4 group-hover:bg-brand-yellow group-hover:text-slate-900 transition">
               <i class="fa-solid fa-soap"></i>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2">Baño Medicado y Relajante</h3>
-            <p class="text-slate-300 text-sm leading-relaxed">Uso de champú dermatológico, secado a temperatura controlada, cepillado y perfume canino especial.</p>
+            <h3 class="text-xl font-bold text-white mb-2">Baño Relajante y Estético</h3>
+            <p class="text-slate-300 text-sm leading-relaxed">Uso de champú premium, secado a temperatura controlada, cepillado profundo y perfume canino especial.</p>
           </div>
 
           <div class="relative z-10 pt-4">
